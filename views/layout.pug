@@ -1,0 +1,40 @@
+doctype html
+html(lang='en')
+  head
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="theme-color" content="#0d141f")
+
+    meta(name="twitter:card" content="summary")
+    meta(name='twitter:title' content=title+" - mkargus")
+    meta(name="twitter:image" content="https://www.mkargus.dev/block_favicon.png")
+    meta(property="og:title" content=title+" - mkargus")
+    meta(property="og:type" content="website")
+    meta(property="og:url" content="https://mkargus.dev")
+    meta(property="og:image" content="https://www.mkargus.dev/block_favicon.png")
+
+    link(rel="icon" href="favicon.png")
+    link(rel='apple-touch-icon' href='block_favicon.png')
+
+    title #{title} - mkargus
+
+    link(rel="stylesheet" href="main.css")
+  body
+    header
+      a(href="/"): img(src="icon.png" alt="hex" width="50" height="50")
+      nav
+        a(href="/about") about
+        span  &#8226; 
+        a(href="/blog") blog
+        span  &#8226; 
+        a(href="/projects") projects
+
+    main
+      block content
+
+    footer
+      hr
+      a(href="mailto:me@mkargus.dev") email
+      span &#8226;
+      a(href="https://twitter.com/m_kargus" target="_blank" rel="noopener noreferrer") twitter
+      span &#8226;
+      a(href="https://github.com/mkargus" target="_blank" rel="noopener noreferrer") github
