@@ -4,7 +4,6 @@ body{
   background: #0d141f;
   color: #e1ebf5f2;
   font-family: 'Roboto', sans-serif;
-  margin: auto;
 }
 
 hr{
@@ -17,6 +16,14 @@ a{
   color: #e1ebf5f2;
 }
 
+nav{
+  position: absolute;
+  top: 0;
+  right: 25%;
+  height: 50px;
+  line-height: 50px;
+}
+
 .blogTitle{
   margin-bottom: 1px
 }
@@ -24,20 +31,14 @@ a{
 @media (min-width: 576px) {
   body{
     width: 97%;
+    margin: auto 10px;
   }
 }
 @media (min-width: 768px) { 
   body{
     width: 50%;
+    margin: auto;
   }
-}
-
-nav{
-  position: absolute;
-  top: 0;
-  right: 25%;
-  height: 50px;
-  line-height: 50px;
 }
 
 /* Footer */
@@ -49,7 +50,7 @@ footer a{
   text-decoration: none;
   border-bottom: 0px solid #e1ebf5f2;
   font-size: 18px;
-  transition: all linear 100ms
+  transition: border linear 100ms
 }
 
 footer a:hover{
@@ -58,9 +59,4 @@ footer a:hover{
 
 footer span{
   margin: 0 5px
-}
-
-.workTitle {
-  vertical-align: middle;
-  display:inline
 }
