@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+/* Override default elements */
 body{
   background: #0d141f;
   color: #e1ebf5f2;
@@ -24,10 +25,6 @@ nav{
   line-height: 50px;
 }
 
-.blogTitle{
-  margin-bottom: 1px
-}
-
 @media (min-width: 576px) {
   body{
     width: 97%;
@@ -39,6 +36,22 @@ nav{
     width: 50%;
     margin: auto;
   }
+}
+
+main:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Main Content */
+.blogTitle{
+  margin-bottom: 1px
+}
+
+.column {
+  float: left;
+  width: 50%;
 }
 
 /* Footer */
