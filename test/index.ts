@@ -1,3 +1,4 @@
+/* eslint @typescript-eslint/explicit-function-return-type: off */
 import supertest from 'supertest'
 import app from '../src/app'
 
