@@ -1,3 +1,4 @@
+/* eslint @typescript-eslint/explicit-function-return-type: off */
 import supertest from 'supertest'
 import app from '../src/app'
 
@@ -8,11 +9,11 @@ describe('mkargus.dev', () => {
 
   it('security headers enabled', () => {
     return supertest(app).get('/')
-    .expect('Content-Security-Policy', /./)
-    .expect('Strict-Transport-Security', /./)
-    .expect('X-Xss-Protection', /./)
-    .expect('X-Content-Type-Options', /./)
-    .expect('X-Frame-Options', /./)
+      .expect('Content-Security-Policy', /./)
+      .expect('Strict-Transport-Security', /./)
+      .expect('X-Xss-Protection', /./)
+      .expect('X-Content-Type-Options', /./)
+      .expect('X-Frame-Options', /./)
   })
 
   describe('index', () => {
