@@ -1,0 +1,13 @@
+{
+  "name": "mkargus",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "800x800"
+    }
+  ],
+  "start_url": "/",
+  "theme_color": "#0d141f",
+  "display": "standalone"
+}

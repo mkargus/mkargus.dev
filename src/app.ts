@@ -22,6 +22,7 @@ app.use(helmet.contentSecurityPolicy({
     formAction: ["'none'"],
     frameAncestors: ["'none'"],
     imgSrc: ["'self'"],
+    manifestSrc: ["'self'"],
     styleSrc: ["'self'", 'https://fonts.googleapis.com']
   }
 }))
