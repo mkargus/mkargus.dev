@@ -1,17 +1,14 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "target": "es5",
     "esModuleInterop": true,
     "noImplicitAny": true,
     "strict": true,
-    "outDir": "dist",
-    "baseUrl": ".",
-    "paths": {
-      "*": ["./node_modules/*"]
-    }
+    "outDir": "dist"
   },
   "include": [
-    "src/**/*"
+    "src/*"
   ]
 }
 
