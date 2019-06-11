@@ -1,5 +1,6 @@
 {
   "name": "mkargus",
+  "short_name": "mkargus",
   "icons": [
     {
       "src": "favicon.png",
@@ -8,6 +9,7 @@
     }
   ],
   "start_url": "/",
+  "background_color": "#0d141f",
   "theme_color": "#0d141f",
   "display": "standalone"
 }

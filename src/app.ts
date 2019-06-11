@@ -23,6 +23,7 @@ app.use(helmet.contentSecurityPolicy({
     frameAncestors: ["'none'"],
     imgSrc: ["'self'"],
     manifestSrc: ["'self'"],
+    scriptSrc: ["'self'"],
     styleSrc: ["'self'", 'https://fonts.googleapis.com']
   }
 }))
@@ -32,6 +33,7 @@ app.get('/', route.getIndex)
 app.get('/about', route.getAbout)
 app.get('/blog', route.getBlog)
 app.get('/projects', route.getProjects)
+app.get('/offline', route.getOffline)
 app.use(route.getPageNotFound)
 
 export default app

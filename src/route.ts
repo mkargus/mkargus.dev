@@ -49,3 +49,10 @@ export let getPageNotFound = (req: Request, res: Response): void => {
     title: '404'
   })
 }
+
+// PWA Offline
+export let getOffline = (req: Request, res: Response): void => {
+  res.render('offline', {
+    title: 'offline'
+  })
+}
