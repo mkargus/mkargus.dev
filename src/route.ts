@@ -1,57 +1,42 @@
 import { Request, Response } from 'express'
 
-/*
-* GET /
-* Home page
-*/
-export let getIndex = (req: Request, res: Response): void => {
+// GET Home page
+export const getIndex = (req: Request, res: Response): void => {
   res.render('home', {
     title: 'Home'
   })
 }
 
-/*
-* GET /about
-* About page
-*/
-export let getAbout = (req: Request, res: Response): void => {
+// GET About page
+export const getAbout = (req: Request, res: Response): void => {
   res.render('about', {
     title: 'About'
   })
 }
 
-/*
-* GET /blog
-* Blog Index
-*/
-export let getBlog = (req: Request, res: Response): void => {
+// GET Blog index
+export const getBlog = (req: Request, res: Response): void => {
   res.render('blog', {
     title: 'Blog'
   })
 }
 
-/*
-* GET /projects
-* Projects page
-*/
-export let getProjects = (req: Request, res: Response): void => {
+// GET Project index
+export const getProjects = (req: Request, res: Response): void => {
   res.render('projects', {
     title: 'Projects'
   })
 }
 
-/*
-* GET /*
-* 404 page
-*/
-export let getPageNotFound = (req: Request, res: Response): void => {
+// GET 404
+export const getPageNotFound = (req: Request, res: Response): void => {
   res.status(404).render('notfound', {
     title: '404'
   })
 }
 
 // PWA Offline
-export let getOffline = (req: Request, res: Response): void => {
+export const getOffline = (req: Request, res: Response): void => {
   res.render('offline', {
     title: 'offline'
   })
