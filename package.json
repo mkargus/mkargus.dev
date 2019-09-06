@@ -12,12 +12,12 @@
     "start": "node dist/server.js",
     "start:dev": "ts-node src/server.ts",
     "lint": "eslint --fix **/*.ts",
-    "test": "mocha -r ts-node/register test/**/* --timeout 5000"
+    "test": "mocha -r ts-node/register test/*"
   },
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.17.1",
-    "helmet": "^3.20.1",
+    "helmet": "^3.21.0",
     "pug": "^2.0.4"
   },
   "devDependencies": {
