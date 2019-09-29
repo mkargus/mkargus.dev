@@ -15,15 +15,11 @@
     "test": "mocha -r ts-node/register test/*"
   },
   "dependencies": {
-    "compression": "^1.7.4",
     "express": "^4.17.1",
-    "helmet": "^3.21.0",
     "pug": "^2.0.4"
   },
   "devDependencies": {
-    "@types/compression": "^1.0.1",
     "@types/express": "^4.17.1",
-    "@types/helmet": "^0.0.44",
     "@types/mocha": "^5.2.7",
     "@types/supertest": "^2.0.8",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
