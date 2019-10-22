@@ -4,12 +4,13 @@ on:
   push:
     branches:
     - master
+  pull_request:
+    branches:
+    - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@master
 
@@ -18,8 +19,8 @@ jobs:
       with:
         node-version: 10.x
 
-    - name: npm install
-      run: npm install
+    - name: npm ci
+      run: npm ci
 
     - name: Lint
       run: npm run lint
