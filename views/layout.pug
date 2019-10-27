@@ -16,21 +16,19 @@ html(lang='en')
 
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
-    link(rel="manifest" href="manifest.json")
     link(rel="icon" href="favicon.png")
     link(rel='apple-touch-icon' href='block_favicon.png')
 
     title #{title} - mkargus
-    script(src="sw.js")
     link(rel="stylesheet" href="main.css")
   body
     header
       a(href="/"): img(src="icon.png" alt="hex" width="50" height="50")
       nav
         a(href="/about") about
-        span  &#8226; 
+        span  &#8226;
         a(href="/blog") blog
-        span  &#8226; 
+        span  &#8226;
         a(href="/projects") projects
 
     main
