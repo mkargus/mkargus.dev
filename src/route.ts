@@ -14,13 +14,6 @@ export const getAbout = (req: Request, res: Response): void => {
   })
 }
 
-// GET Blog index
-export const getBlog = (req: Request, res: Response): void => {
-  res.render('blog', {
-    title: 'Blog'
-  })
-}
-
 // GET Project index
 export const getProjects = (req: Request, res: Response): void => {
   res.render('projects', {
@@ -32,12 +25,5 @@ export const getProjects = (req: Request, res: Response): void => {
 export const getPageNotFound = (req: Request, res: Response): void => {
   res.status(404).render('notfound', {
     title: '404'
-  })
-}
-
-// PWA Offline
-export const getOffline = (req: Request, res: Response): void => {
-  res.render('offline', {
-    title: 'offline'
   })
 }

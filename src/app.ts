@@ -2,6 +2,9 @@ import express from 'express'
 import path from 'path'
 import * as route from './route'
 
+// Route Controllers
+import * as blogController from './controllers/blog'
+
 // Create Express server
 const app = express()
 
@@ -14,9 +17,9 @@ app.use(express.static('static'))
 // Routes
 app.get('/', route.getIndex)
 app.get('/about', route.getAbout)
-app.get('/blog', route.getBlog)
+app.get('/blog', blogController.getBlogIndex)
+app.get('/blog/feed/:id(rss|xml)', blogController.getBlogFeed)
 app.get('/projects', route.getProjects)
-app.get('/offline', route.getOffline)
 app.use(route.getPageNotFound)
 
 export default app
