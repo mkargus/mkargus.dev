@@ -7,12 +7,20 @@
     "type": "git",
     "url": "https://github.com/mkargus/mkargus.dev"
   },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ]
+  },
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
     "start:dev": "ts-node src/server.ts",
     "lint": "eslint --fix **/*.ts",
-    "test": "mocha -r ts-node/register test/*"
+    "test": "nyc mocha -r ts-node/register test/*"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -26,6 +34,7 @@
     "@typescript-eslint/parser": "^2.5.0",
     "eslint": "^6.5.1",
     "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
     "supertest": "^4.0.2",
     "ts-node": "^8.4.1",
     "typescript": "^3.6.4"

@@ -9,9 +9,9 @@ describe('mkargus.dev', () => {
     })
   })
 
-  describe('blog', () => {
+  describe('about', () => {
     it('return status 200', () => {
-      return supertest(app).get('/blog').expect(200)
+      return supertest(app).get('/about').expect(200)
     })
   })
 
