@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es5",
+    "target": "es6",
     "esModuleInterop": true,
     "noImplicitAny": true,
+    "removeComments": true,
     "strict": true,
     "outDir": "dist"
   },
@@ -11,4 +12,3 @@
     "src/*"
   ]
 }
-
