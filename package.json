@@ -20,7 +20,7 @@
     "start": "node dist/server.js",
     "start:dev": "ts-node src/server.ts",
     "lint": "eslint --fix **/*.ts",
-    "test": "nyc mocha -r ts-node/register test/*"
+    "test": "nyc mocha -r ts-node/register test/*.test.ts"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -32,7 +32,7 @@
     "@types/supertest": "^2.0.8",
     "@typescript-eslint/eslint-plugin": "^2.5.0",
     "@typescript-eslint/parser": "^2.5.0",
-    "eslint": "^6.5.1",
+    "eslint": "^6.6.0",
     "mocha": "^6.2.2",
     "nyc": "^14.1.1",
     "supertest": "^4.0.2",
