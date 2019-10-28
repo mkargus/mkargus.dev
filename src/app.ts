@@ -1,9 +1,11 @@
 import express from 'express'
 import path from 'path'
-import * as route from './route'
 
 // Route Controllers
+import * as appController from './controllers/app'
 import * as blogController from './controllers/blog'
+// import * as contactController from './controllers/contact'
+import * as miscController from './controllers/misc'
 
 // Create Express server
 const app = express()
@@ -15,11 +17,13 @@ app.set('view engine', 'pug')
 app.use(express.static('static'))
 
 // Routes
-app.get('/', route.getIndex)
-app.get('/about', route.getAbout)
+app.get('/', appController.getIndex)
+app.get('/about', miscController.getAbout)
 app.get('/blog', blogController.getBlogIndex)
+app.get('/blog/:post', blogController.getBlogPost)
 app.get('/blog/feed/:id(rss|xml)', blogController.getBlogFeed)
-app.get('/projects', route.getProjects)
-app.use(route.getPageNotFound)
+// app.get('/contact', contactController.getContactIndex)
+app.get('/projects', miscController.getProjects)
+app.use(appController.getPageNotFound)
 
 export default app
