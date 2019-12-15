@@ -1,43 +1,18 @@
 doctype html
-html(lang='en')
+html
   head
-
-    //- Social Media
-    meta(name="twitter:card" content="summary")
-    meta(name='twitter:title' content=title+" - mkargus")
-    meta(name="twitter:image" content="https://www.mkargus.dev/block_favicon.png")
-    meta(property="og:title" content=title+" - mkargus")
-    meta(property="og:type" content="website")
-    meta(property="og:url" content="https://mkargus.dev")
-    meta(property="og:image" content="https://www.mkargus.dev/block_favicon.png")
-
-    meta(charset="UTF-8")
-    meta(name="author" content="Michael Kargus")
-
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-
     link(rel="icon" href="favicon.png")
     link(rel='apple-touch-icon' href='block_favicon.png')
 
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
     title #{title} - mkargus
-    link(rel="stylesheet" href="main.css")
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
   body
-    header
-      a(href="/"): img.logo(src="icon.png" alt="hex" width="50" height="50")
-      nav
-        a(href="/about") about
-        span  &#8226;
-        a(href="/blog") blog
-        span  &#8226;
-        a(href="/projects") projects
+    include partials/header.pug
 
-    main
+    .container
       block content
 
-    footer
-      hr
-      a(href="mailto:me@mkargus.dev") email
-      span &#8226;
-      a(href="https://twitter.com/m_kargus" target="_blank" rel="noopener noreferrer") twitter
-      span &#8226;
-      a(href="https://github.com/mkargus" target="_blank" rel="noopener noreferrer") github
+    script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous")
+

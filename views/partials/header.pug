@@ -1,0 +1,11 @@
+nav.navbar.navbar-expand-lg.sticky-top.navbar-dark.bg-dark.py-0
+  .container
+    a.navbar-brand(href="/"): img(src="icon.png" width="35" height="35")
+    button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"): span.navbar-toggler-icon
+
+    #navbar.collapse.navbar-collapse
+      .navbar-nav.ml-auto
+        a.nav-item.nav-link(class=(title === 'About') ? 'active':null href="/about") About
+        a.nav-item.nav-link(class=(title === 'Blog') ? 'active':null href="/blog") Blog
+        //- a.nav-item.nav-link(class=(title === 'Contact') ? 'active':null href="/contact") Contact
+        a.nav-item.nav-link(class=(title === 'Projects') ? 'active':null href="/projects") Projects

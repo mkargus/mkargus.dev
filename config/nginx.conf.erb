@@ -17,7 +17,7 @@ http {
 
   # Security Headers
   proxy_hide_header X-Powered-By;
-  add_header Content-Security-Policy "base-uri 'none'; default-src 'none'; font-src https://fonts.gstatic.com; form-action 'none'; frame-ancestors 'none'; img-src 'self'; manifest-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com";
+  add_header Content-Security-Policy "base-uri 'none'; default-src 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; script-src 'self' https://code.jquery.com https://stackpath.bootstrapcdn.com; style-src 'self' https://stackpath.bootstrapcdn.com";
   add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
   add_header X-XSS-Protection "1; mode=block";
   add_header X-Content-Type-Options nosniff;
