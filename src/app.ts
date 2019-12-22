@@ -23,6 +23,7 @@ app.get('/blog', blogController.getBlogIndex)
 app.get('/blog/:post', blogController.getBlogPost)
 app.get('/blog/feed/:id(rss|xml)', blogController.getBlogFeed)
 // app.get('/contact', contactController.getContactIndex)
+// app.post('/contact', contactController.postContact)
 app.get('/projects', miscController.getProjects)
 app.use(appController.getPageNotFound)
 

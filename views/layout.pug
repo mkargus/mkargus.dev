@@ -1,12 +1,22 @@
 doctype html
 html
   head
+
+    meta(name="twitter:card" content="summary")
+    meta(name='twitter:title' content=title+" | mkargus")
+    meta(name="twitter:image" content="https://www.mkargus.dev/block_favicon.png")
+    meta(property="og:title" content=title+" | mkargus")
+    meta(property="og:type" content="website")
+    meta(property="og:url" content="https://mkargus.dev")
+    meta(property="og:image" content="https://www.mkargus.dev/block_favicon.png")
+
     link(rel="icon" href="favicon.png")
     link(rel='apple-touch-icon' href='block_favicon.png')
 
     meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
     title #{title} - mkargus
     link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
+
   body
     include partials/header.pug
 
