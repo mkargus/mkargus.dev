@@ -1,26 +1,41 @@
 extends layout
 
 block content
+
+  -
+    var json = [
+      {
+        title: 'A Followup to “A Letter to ROLVe”',
+        date: "August 8th, 2017",
+        url: 'https://medium.com/@Fasty48/a-followup-to-a-letter-to-rolve-85d23145a4b3',
+        spoiler: 'A week after the publishing "A Letter to ROLVe", there were some updates and corrections to the original write.'
+      },
+      {
+        title: 'A Letter to ROLVe',
+        date: "August 3rd, 2017",
+        url: 'https://medium.com/@Fasty48/a-letter-to-rolve-38fc61efb0f',
+        spoiler: "A dive into ROLVe's Counter Blox game making money off of Counter Strike's assets directly."
+      },
+      {
+        title: 'Roblox and its legal issues',
+        date: "June 29th, 2017",
+        url: 'https://medium.com/@Fasty48/roblox-and-its-legal-issues-ae8361d4b074',
+        spoiler: "A look into the Roblox's copyright issues with their hats, users uploading full songs, and their lawsuit with Cinemark USA."
+      },
+      {
+        title: 'MisterObvious: Pedophile and Liar',
+        date: "June 25th, 2017",
+        url: 'https://medium.com/@Fasty48/misterobvious-pedo-and-liar-67687815d566',
+        spoiler: "I take a overview look of a popular Roblox Youtuber being caught as a pedophile, fact checking his tweets, his attempts to sue and as the question if he should get a second chance."
+      }
+    ]
+
   h1 Blog
   p Occasional writes that I do.
 
-  a(href='https://medium.com/@Fasty48/a-followup-to-a-letter-to-rolve-85d23145a4b3' target="_blank" rel="noopener noreferrer")
-    h2.blogTitle A Followup to “A Letter to ROLVe”
-  small August 8th, 2017
-  p A week after the publishing "A Letter to ROLVe", there were some updates and corrections to the original write. 
-
-  a(href='https://medium.com/@Fasty48/a-followup-to-a-letter-to-rolve-85d23145a4b3' target="_blank" rel="noopener noreferrer")
-    h2.blogTitle A Letter to ROLVe
-  small August 3rd, 2017
-  p A dive into ROLVe's Counter Blox game making money off of Counter Strike's assets directly.
-
-  a(href='https://medium.com/@Fasty48/roblox-and-its-legal-issues-ae8361d4b074' target="_blank" rel="noopener noreferrer")
-    h2.blogTitle Roblox and its legal issues
-  small June 29th, 2017
-  p A look into the Roblox's copyright issues with their hats, users uploading full songs, and their lawsuit with Cinemark USA.
-
-  a(href='https://medium.com/@Fasty48/misterobvious-pedo-and-liar-67687815d566' target="_blank" rel="noopener noreferrer")
-    h2.blogTitle MisterObvious: Pedophile and Liar
-  small June 25th, 2017
-  p I take a overview look of a popular Roblox Youtuber being caught as a pedophile, fact checking his tweets, his attempts to sue and as the question if he should get a second chance.
-
+  each item in json
+    a(href=item.url target="_blank" rel="noopener noreferrer")
+      h2.blogTitle= item.title
+    small= item.date
+    p= item.spoiler
+    hr

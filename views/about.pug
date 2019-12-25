@@ -3,31 +3,37 @@ extends layout
 block content
   h1 About
 
-  img(src="me.jpg" alt="me" width="200" height="200")
-  p I'm Michael. I'm a self-taught computer programmer that 
-    | <a href='/projects'>creates stuff</a>.
+  img.mx-auto.d-block.rounded-circle.mb-3(src="me.jpg" alt="me" width="150" height="150")
 
-  h2 Skills
-  .column
-    h3 Programming Languages 
-      small (coding/markdown)
-    ul
-      li Lua
-      li HTML/CSS
-      li JavaScript
-      li Pug
-      li TypeScript
-    
-    h3 Software
-    ul
-      li npm
-      li Git
-      li Visual Studio Code
+  p.text-center.
+    I'm Michael. I'm a self-taught computer programmer that #[a(href='/projects') creates stuff].
 
-  .column
-    h3 Frameworks
-    ul
-      li Node.js
-      li Express.js
-      li Bootstrap
-      li jQuery
+  .row
+    .col-sm
+      .card.h-100
+        h5.card-header Programming Languages
+          br
+          small (coding / markdown)
+        .card-body
+          ul
+            li Lua
+            li HTML / CSS
+            li JavaScript
+            li Pug
+            li TypeScript
+    .col-sm
+      .card.h-100
+        h5.card-header Software
+        .card-body
+          ul
+            li npm
+            li Git
+            li Visual Studio Code
+    .col-sm
+      .card.h-100
+        h5.card-header Frameworks
+        .card-body
+          ul
+            li Express.js
+            li Bootstrap
+            li jQuery
