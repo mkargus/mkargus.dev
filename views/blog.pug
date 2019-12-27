@@ -1,26 +1,54 @@
 extends layout
 
 block content
+
+
+  //- TODO: Remove this when overhauling blog's system.
+  -
+    var json = [
+      {
+        title: 'A Followup to “A Letter to ROLVe”',
+        date: "August 8th, 2017",
+        url: 'https://medium.com/@Fasty48/a-followup-to-a-letter-to-rolve-85d23145a4b3',
+        spoiler: 'A week after the publishing "A Letter to ROLVe", there were some updates and corrections to the original write.',
+        img: 'https://miro.medium.com/max/1500/1*ggMycl4liICzoC_Czi_8NA.png'
+
+      },
+      {
+        title: 'A Letter to ROLVe',
+        date: "August 3rd, 2017",
+        url: 'https://medium.com/@Fasty48/a-letter-to-rolve-38fc61efb0f',
+        spoiler: "A dive into ROLVe's Counter Blox game making money off of Counter Strike's assets directly.",
+        img: 'https://miro.medium.com/max/1280/1*i1rVBbjp62f4hg-xKYNtBg.jpeg'
+      },
+      {
+        title: 'Roblox and its legal issues',
+        date: "June 29th, 2017",
+        url: 'https://medium.com/@Fasty48/roblox-and-its-legal-issues-ae8361d4b074',
+        spoiler: "A look into the Roblox's copyright issues with their hats, users uploading full songs, and their lawsuit with Cinemark USA.",
+        img: 'https://miro.medium.com/max/500/1*RxENNjSKyPe2JQcZsc5Q2Q.png'
+      },
+      {
+        title: 'MisterObvious: Pedophile and Liar',
+        date: "June 25th, 2017",
+        url: 'https://medium.com/@Fasty48/misterobvious-pedo-and-liar-67687815d566',
+        spoiler: "I take a overview look of a popular Roblox Youtuber being caught as a pedophile, fact checking his tweets, his attempts to sue and as the question if he should get a second chance.",
+        img: 'https://miro.medium.com/max/621/1*neWUip_98ztAuSG5CYDrkg.png'
+      }
+    ]
+
   h1 Blog
   p Occasional writes that I do.
 
-  a(href='https://medium.com/@Fasty48/a-followup-to-a-letter-to-rolve-85d23145a4b3' target="_blank" rel="noopener noreferrer")
-    h2.blogTitle A Followup to “A Letter to ROLVe”
-  small August 8th, 2017
-  p A week after the publishing "A Letter to ROLVe", there were some updates and corrections to the original write. 
-
-  a(href='https://medium.com/@Fasty48/a-followup-to-a-letter-to-rolve-85d23145a4b3' target="_blank" rel="noopener noreferrer")
-    h2.blogTitle A Letter to ROLVe
-  small August 3rd, 2017
-  p A dive into ROLVe's Counter Blox game making money off of Counter Strike's assets directly.
-
-  a(href='https://medium.com/@Fasty48/roblox-and-its-legal-issues-ae8361d4b074' target="_blank" rel="noopener noreferrer")
-    h2.blogTitle Roblox and its legal issues
-  small June 29th, 2017
-  p A look into the Roblox's copyright issues with their hats, users uploading full songs, and their lawsuit with Cinemark USA.
-
-  a(href='https://medium.com/@Fasty48/misterobvious-pedo-and-liar-67687815d566' target="_blank" rel="noopener noreferrer")
-    h2.blogTitle MisterObvious: Pedophile and Liar
-  small June 25th, 2017
-  p I take a overview look of a popular Roblox Youtuber being caught as a pedophile, fact checking his tweets, his attempts to sue and as the question if he should get a second chance.
-
+  each item in json
+    .card.mb-3.rounded-0
+      .row.no-gutters
+        .col-md-4
+          //- TODO: Fix height being large.
+          img.card-img(src=item.img)
+        .col-md-8
+          .card-body
+            h5.card-title= item.title
+            p.card-text= item.spoiler
+            p.card-test: small.text-muted= item.date
+            a.stretched-link(href=item.url) Read
