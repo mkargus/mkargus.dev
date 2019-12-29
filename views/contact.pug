@@ -10,14 +10,14 @@ block content
     .form-row
       .form-group.col-md-6
         label(for="contactName") Name
-        input.form-control.form-control-sm(type="text" id="contactName" placeholder='John Doe' required)
+        input.form-control.form-control-sm(type="text" name='contactName' id="contactName" placeholder='John Doe' required)
 
       .form-group.col-md-6
         label(for="contactEmail") Email address
-        input.form-control.form-control-sm(type="email" id="contactEmail" placeholder="john.doe@example.com" required)
+        input.form-control.form-control-sm(type="email" name='contactEmail' id="contactEmail" placeholder="john.doe@example.com" required)
 
     .form-group
       label(for="contactBody") Message
-      textarea.form-control.form-control-sm(rows="5" id="contactBody" placeholder='Message goes here.' required)
+      textarea.form-control.form-control-sm(rows="5" name='contactBody' id="contactBody" placeholder='Message goes here.' required)
 
     button.btn.btn-primary(type="submit") Submit

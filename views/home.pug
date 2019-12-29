@@ -3,7 +3,7 @@ extends layout
 block content
 
   -
-    var strings = [
+    const strings = [
       'print("Hello, world!")',
       'a 700 year old coder',
       'part to terrain dude',
@@ -20,14 +20,15 @@ block content
       '@gitlost',
     ]
 
-    var picked = strings[Math.floor(Math.random() * strings.length)]
+    const picked = strings[Math.floor(Math.random() * strings.length)]
+
   .text-center.mt-5
     img(src="icon.png" width="250" height="250")
 
-    p.h2.mb-2=picked
+    p.h2.mb-4=picked
 
     .btn-group.btn-group-lg
-      a.btn.btn-secondary(href='about') About
-      a.btn.btn-secondary(href='blog') Blog
-      //- a.btn.btn-secondary(href='Contact') Contact
-      a.btn.btn-secondary(href='projects') Projects
+      a.btn.btn-outline-light(href='about') About
+      a.btn.btn-outline-light(href='blog') Blog
+      //- a.btn.btn-outline-light(href='contact') Contact
+      a.btn.btn-outline-light(href='projects') Projects
