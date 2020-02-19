@@ -1,11 +1,13 @@
-import { Request, Response, NextFunction } from 'express'
+import { Request, Response } from 'express'
 
-const getContactIndex = (req: Request, res: Response, next: NextFunction): void => {
-  next()
+const getContactIndex = (req: Request, res: Response): void => {
+  res.render('contact', {
+    title: 'Contact'
+  })
 }
 
-const postContact = (req: Request, res: Response, next: NextFunction): void => {
-  next()
-}
+// const postContact = (req: Request, res: Response, next: NextFunction): void => {
+  // next()
+// }
 
-export { getContactIndex, postContact }
+export { getContactIndex }

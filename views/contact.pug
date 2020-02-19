@@ -3,9 +3,22 @@ extends layout
 block content
   h1 Contact
 
-  hr
+  p You can contact me on some social media platforms:
+  ul
+    li
+      a(href="https://twitter.com/m_kargus") @m_kargus on Twitter
+    li
+      a(href='https://www.reddit.com/user/Fastcar48') u/Fastcar48 on Reddit
 
+  p.
+  | If you see issues with my code or want to help, you sure open a issue or pull request on any
+  a(href='https://github.com/mkargus?tab=repositories')  my Github repo!
+
+  hr
   p.h5 Email form
+  b Soon™
+
+//-
   form(action="/contact", method="post")
     .form-row
       .form-group.col-md-6
