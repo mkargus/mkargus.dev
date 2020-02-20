@@ -4,3 +4,4 @@ test
 README.md
 LICENSE.md
 tsconfig.eslint.json
+/.vscode
