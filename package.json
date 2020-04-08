@@ -22,7 +22,7 @@
     "@types/mocha": "^7.0.2",
     "@types/supertest": "^2.0.8",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
-    "@typescript-eslint/parser": "^2.26.0",
+    "@typescript-eslint/parser": "^2.27.0",
     "eslint": "7.0.0-alpha.3",
     "mocha": "^7.1.1",
     "nyc": "^15.0.1",
