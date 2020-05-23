@@ -1,9 +1,10 @@
 import { Request, Response, NextFunction } from 'express'
-// import fs from 'fs'
+import blogfeed from '../json/blogfeed.json'
 
 const getBlogIndex = (req: Request, res: Response): void => {
   res.render('blog', {
-    title: 'Blog'
+    title: 'Blog',
+    post: blogfeed
   })
 }
 
