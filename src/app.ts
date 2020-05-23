@@ -1,5 +1,5 @@
 import express from 'express'
-import path from 'path'
+import exphbs from 'express-handlebars'
 
 // Route Controllers
 import * as appController from './controllers/app'
@@ -12,8 +12,8 @@ const app = express()
 
 // Express configs
 app.set('port', 3000)
-app.set('views', path.join(__dirname, '../views'))
-app.set('view engine', 'pug')
+app.engine('handlebars', exphbs())
+app.set('view engine', 'handlebars')
 app.use(express.static('static'))
 
 // Routes

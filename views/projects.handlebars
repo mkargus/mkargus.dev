@@ -1,0 +1,20 @@
+<h1>Project</h1>
+<p>Stuff that I've had a hand in making <small>(and/or) breaking</small>.</p>
+
+{{#each feed}}
+<div class='my-3'>
+  <h2>{{name}}</h2>
+
+  {{#if img}}
+    <img src={{img}} alt={{name}} width="150" height="150">
+  {{/if}}
+
+  <p>{{{desc}}}</p>
+  {{#each urls}}
+    <a class='btn btn-primary' href={{url}} target="_blank" rel="noopener noreferrer">{{name}}</a>
+
+  {{/each}}
+
+</div>
+
+{{/each}}

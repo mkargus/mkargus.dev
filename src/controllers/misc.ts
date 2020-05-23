@@ -1,4 +1,5 @@
 import { Request, Response } from 'express'
+import projectJson from '../json/project.json'
 
 const getAbout = (req: Request, res: Response): void => {
   res.render('about', {
@@ -8,7 +9,8 @@ const getAbout = (req: Request, res: Response): void => {
 
 const getProjects = (req: Request, res: Response): void => {
   res.render('projects', {
-    title: 'Projects'
+    title: 'Projects',
+    feed: projectJson
   })
 }
 
