@@ -10,7 +10,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
-    "lint": "eslint --fix **/*.ts",
+    "lint": "eslint --fix src --ext .ts",
     "test": "nyc mocha -r ts-node/register test/*.test.ts"
   },
   "dependencies": {
