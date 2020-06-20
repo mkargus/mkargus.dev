@@ -7,9 +7,10 @@
     "removeComments": true,
     "strict": true,
     "outDir": "dist",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "rootDir": "src"
   },
-  "include": [
-    "src/*"
+  "exclude": [
+    "src/**/*.test.ts"
   ]
 }

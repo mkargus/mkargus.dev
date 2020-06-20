@@ -1,7 +1,5 @@
-.github
-test
-.eslintrc.yml
+/.github
+/.vscode
+.eslintrc
 README.md
 LICENSE.md
-tsconfig.eslint.json
-/.vscode
