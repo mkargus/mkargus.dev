@@ -22,6 +22,7 @@ http {
   add_header X-XSS-Protection "1; mode=block";
   add_header X-Content-Type-Options nosniff;
   add_header Referrer-Policy "same-origin";
+  add_header Permissions-Policy interest-cohort=();
 
   # Timeouts
   client_body_timeout 12;
