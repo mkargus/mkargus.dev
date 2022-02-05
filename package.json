@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/mkargus/mkargus.dev"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
