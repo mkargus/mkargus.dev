@@ -17,7 +17,7 @@ http {
 
   # Security Headers
   proxy_hide_header X-Powered-By;
-  add_header Content-Security-Policy "base-uri 'none'; default-src 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self' data: https://miro.medium.com; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net;
+  add_header Content-Security-Policy "base-uri 'none'; default-src 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self' data: https://miro.medium.com; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net";
   add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
   add_header X-XSS-Protection "1; mode=block";
   add_header X-Content-Type-Options nosniff;
